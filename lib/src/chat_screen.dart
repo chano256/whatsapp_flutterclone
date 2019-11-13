@@ -3,19 +3,19 @@ import 'package:whatsapp_flutterclone/models/chat_model.dart';
 
 class ChatScreen extends StatefulWidget{
   @override
-  _ChatScreenState createState() => _ChatScreenState();
+  ChatScreenState createState() => ChatScreenState();
 }
 
-class _ChatScreenState extends State<ChatScreen> {
+class ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
+    return new ListView.builder(
         itemCount: dummyData.length,
         itemBuilder: (context, i) => new Column(
           children: <Widget>[
             new Divider(
               height: 10.0,
-            )
+            ),
             new ListTile(
               leading: new CircleAvatar(
                 foregroundColor: Theme.of(context).primaryColor,
@@ -39,12 +39,12 @@ class _ChatScreenState extends State<ChatScreen> {
                 padding: const EdgeInsets.only(top: 5.0),
                 child: new Text(
                   dummyData[i].message,
-                  style: new TextStyle(color: Colors.grey, fontSize: 14.0),
+                  style: new TextStyle(color: Colors.grey, fontSize: 15.0),
                 ),
               ),
             )
           ],
-        )
+        ),
     );
   }
 }
